@@ -42,9 +42,10 @@ class Maoyan:
 
 	def export_movie_csv(self, movie):
 		movie_dict = self.get_movie(movie)
-		df.from_dict(movie_dict).to_csv( "%s-%s-%s" % (movie_dict["releaseDate"], movie_dict["movieName"],str(movie) ) )
+		df.from_dict(movie_dict).to_csv( "%s-%s-%s.csv" % (movie_dict["releaseDate"], movie_dict["movieName"],str(movie) ) )
 
 	def search_movie_id(self, name):
 		response = self.session.get("http://pf.maoyan.com/search?_v_=yes&key=%s"%name).text
 		movieid = re.findall(r'data-com=\"hrefTo,href:\'\/movie\/(.*)\?',response)
+
 		return movieid
