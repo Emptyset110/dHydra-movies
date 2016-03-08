@@ -19,16 +19,16 @@ m = movies.Maoyan()
 m.get_box("2014-03-07")
 
 #获取某一日票房,日期格式YYYY-MM-DD,返回格式为pandas.DataFrame
-m.get_box_dataframe(246286)
+m.get_box_dataframe("2014-03-07")
 
 #将某日电影票房数据导出为当前文件夹下的csv文件,文件名为"日期.csv"
-m.export_movie_csv(246286)
+m.export_box_csv("2014-03-07")
 
 #获取某电影数据,参数为电影ID,返回数据为dict
 m.get_movie(246286)
 
 #获取某电影数据,参数为电影ID,返回数据为pandas.DataFrame
-m.get_box_dataframe(246286)
+m.get_movie_dataframe(246286)
 
 #将某电影导出为当前文件夹下的csv文件，文件名命名规则为"上映日期-电影名-电影id"
 m.export_movie_csv(246286)
