@@ -37,7 +37,7 @@ class Maoyan:
 	def get_movie_dataframe(self, movie):
 		movie_dict = self.get_movie(movie)
 		movie_df = df.from_dict(movie_dict["data"])
-		return box_df
+		return movie_df
 
 	def export_movie_csv(self, movie):
 		movie_dict = self.get_movie(movie)
