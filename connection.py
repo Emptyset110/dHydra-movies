@@ -18,13 +18,15 @@ HEADERS_MAOYAN = {
 ,	'X-Requested-With'	:	'XMLHttpRequest'
 }
 
-URL_MAOYAN_BOX = 'http://pf.maoyan.com/history/date/box.json'
-
+URL_MAOYAN_DATE = 'http://pf.maoyan.com/history/date/box.json'
+URL_MAOYAN_MOVIE = 'http://pf.maoyan.com/history/movie/box.json'
 PARAM_DATE = lambda date: {
 	"date"	:	date
 ,	"cnt"	:	10
 }
 
-PARAM_MOVIEID = lambda id: {
-	
+PARAM_MOVIEID = lambda movie: {
+	"movie"		:	movie
+,	"offset"	:	0
+,	"limit"		:	10000
 }
